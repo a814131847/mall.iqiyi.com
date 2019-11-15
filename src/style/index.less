@@ -22,7 +22,7 @@
         a{
             color:#999;
             &:hover {
-                color:red;
+                color:#ee394b;
                 text-decoration: none;
             }
         }
@@ -47,11 +47,11 @@
             a {
             color:#999;
                 &:hover {
-                color:red;
+                color:#ee394b;
                 text-decoration: none;
                 }
                 .orange {
-                color:orange;
+                color: #f66a11;;
                 font-weight: 700;
                 }
                 .iconfont {
@@ -65,7 +65,7 @@
             a {
                 color:#999;
                 &:hover {
-                    color:red;
+                    color:#ee394b;
                     text-decoration: none;
                     }                    
                     .iconfont {
@@ -79,4 +79,310 @@
         
     }
 
+}
+
+// 头部导航结束
+
+
+// 头部开始
+#head {
+    width:100%;
+    height:97px;
+    margin:0 0 30px 0;
+    // background: burlywood;
+    >.container {
+        // background: chartreuse;
+        height:100%;
+        .head_logo{
+            margin:36px 0 0 0;
+        }
+        #head_searchBox {
+            height:100%;
+            width:667px;
+            padding-left:154px;
+            .container{
+                width:100%;
+                .input-group{
+                    border-radius: 0;
+                    border:1px solid #ee394b;
+                    width:100%;
+                    height:34px;
+                    margin-top:37px;
+                    input::-webkit-input-placeholder{
+                        font-size:12px!important;
+                        color: #999;
+                        
+                        }
+                    .form-control{
+                        background:transparent;
+                        border:0;
+                           
+                    }
+                    .btn-default {
+                        width:100px;
+                        height:34px;
+                        background-color:#ee394b;
+                        font-size:20px;
+                        color:white;
+                        line-height: 34px;
+                        text-align: center;
+                        padding: 0;
+                        border-radius: 0;
+                        outline: none;
+                    }
+                }
+            }
+            .search_hots {
+                font-size: 0;
+                .top_cutline {
+                    margin-top: 10px;
+                    display: inline-block;
+                    overflow: hidden;
+                    height: 8px;
+                    border-left: 1px solid #e5e5e5
+                    
+                }
+                a {
+                    font-size:12px!important;
+                    color:#ccc;
+                    text-decoration: none;
+                    margin:0 10px;
+                }.hots {
+                    color:#ee394b;
+                }
+            }
+        }
+    }
+}
+
+// 头部结束
+
+// 主体导航开始
+#main_nav{
+    width:100%;
+    height:40px;
+    background-color: #ee394b; 
+    box-sizing: content-box;
+    .container {
+        ul {
+            list-style: none;
+            li {
+                float: left;
+                height:100%;
+                // width:32px;
+                padding:0 25px;
+                font-size:16px;
+                line-height: 40px;
+                color:#fff;
+                &:hover{
+                height:40px;
+                border-bottom:3px solid #cc0e2b;
+                }
+                a {
+                    color:#fff;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+            li.active {
+                height:40px;
+                border-bottom:3px solid #cc0e2b; 
+            }
+        }
+    }
+}
+
+// 导航结束
+
+// 轮播图
+.pb-carouselWarp {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: 50px;
+    .pb-carousel {
+        position: relative;
+        height: 100%;
+        li {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+              }
+          }
+        .pb-this {
+            display: block;
+            left: 0;
+          }  
+      }
+    .pb-carousel-ind {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        li {
+            float: left;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 0 5px;
+            cursor: pointer;
+          }
+          .pb-this {
+            background-color: #ee394b;
+          }
+     }
+     .pb-arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -33px;
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .0);
+        cursor: pointer;
+        border: none;
+        outline:none;
+      }
+      .pb-arrow-prev {
+        left: 159px;
+        background: rgba(0, 0, 0, .4) url(../img/arrow-left.png) no-repeat center;
+      }
+      .pb-arrow-next {
+        right: 159px;
+        background: rgba(0, 0, 0, .4) url(../img/arrow-right.png) no-repeat center;
+      }
+}
+.pb-carouselWarp[type='updown'] .pb-carousel-ind {
+    position: absolute;
+    width: 15px;
+    top: 50%;
+    left: auto;
+    bottom: auto;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  .pb-carouselWarp[type='updown'] .pb-carousel-ind .pb-this {
+    background-color: #ee394b;
+  }
+  .pb-carouselWarp[type='updown'] .pb-arrow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -20px;
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  .pb-carouselWarp[type='updown'] .pb-arrow-prev {
+    top: 20px;
+    background: #000000 url(../img/arrow-top.png) no-repeat center;
+  }
+  .pb-carouselWarp[type='updown'] .pb-arrow-next {
+    top: auto;
+    bottom: 20px;
+    background: #000000 url(../img/arrow-bottom.png) no-repeat center;
+  }
+
+//   轮播图结束
+
+// 广告
+
+#ad {
+    width: 100%;
+    height:120px;
+    margin-top:40px;
+}
+
+// 广告结束
+
+//每日精选开始
+
+#selection {
+    width: 100%;
+    padding:25px 0 0 0;
+    .container{
+        .sel_head {
+            height:36px;
+            width: 100%;
+            // background: olivedrab;
+            margin-top:15px;
+            .sel_head_left {
+                width: 1140px;
+                height: 100%;
+                // background: orchid;
+                .sel_head_left-headerIcon {
+                background-image: url(../img/jinxuan.png);
+                vertical-align: top;
+                width: 36px;
+                height: 36px;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: 36px 36px;
+                background-position: 100% 100%;
+                }
+                .sel_head_left-headerTitle {
+                    height:100%;
+                    line-height: 36px;
+                    margin:0 10px;
+                    font-size: 28px;                   
+                    vertical-align: middle;
+                    color: #333;
+                }
+                .sel_head_left-headerSlide {
+                    vertical-align: bottom;
+                    display: inline-block;
+                    margin-bottom: 7px;
+                    border-left: 1px solid #c2c2c2;
+                    width: 2px;
+                    height: 10px;
+                    margin-bottom:10px;
+
+                }
+                .sel_head_left-headerSubTitle {
+                    vertical-align: bottom;
+                    display: inline-block;
+                    margin-bottom: 4px;
+                    line-height: 16px;
+                    line-height: 20px;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    color: #c2c2c2;
+                }
+            }
+            .sel_head_right {
+                width: 60px;
+                height: 100%;
+                text-align: right;
+                a {
+                    color:#666;
+                    font-size: 14px;
+                    float: right;
+                    margin-top:20px;
+                    &:hover{
+                        color:#ee394b;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
 }

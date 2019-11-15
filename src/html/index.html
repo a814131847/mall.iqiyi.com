@@ -8,15 +8,18 @@
     <title>爱奇艺商城</title>
     <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../../node_modules/requirejs/require.js" data-main="main"></script>
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/main"></script>
     <link rel="stylesheet" href="../style/index.css">
 </head>
 
 <body>
     <!-- 头部导航条 -->
+
     <div id="tab-container">
         <div class="container">
+
             <!-- 左边部分 -->
+
             <div class="top-navLeft pull-left col-md-6">
                 <span class="pull-left welcome">欢迎来到爱奇艺商城</span>
                 <div class="loginmenu pull-left center-block">
@@ -24,7 +27,9 @@
                     <a href="javascript" class="reg">免费注册</a>
                 </div>
             </div>
+
             <!-- 右边部分 -->
+
             <div class="top-navRight pull-right col-md-6">
                 <div class="topNav_orders pull-left">
                     <a class="topMenuCar_link" href="javascript">
@@ -65,9 +70,218 @@
             </div>
         </div>
     </div>
+
     <!-- 头部导航结束 -->
 
     <!-- 头部开始 -->
+
+    <div id="head">
+        <div class="container">
+
+            <!-- logo开始 -->
+
+            <div class="head_logo pull-left">
+                <a href="">
+                    <img src="../img/logo1126.png" alt="" title="爱奇艺商城">
+                </a>
+            </div>
+
+            <!-- logo结束 -->
+
+            <!-- 搜索部分开始 -->
+
+            <div id="head_searchBox" class="pull-left">
+
+                <!-- 搜索框开始 -->
+
+                <div class="container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="亲爱的热爱的">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 搜索框结束 -->
+
+                <!-- 热搜开始 -->
+
+                <div class="search_hots">
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_1">漫威</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_2" class="hots">银河补习班</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_3">i71定制</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_4" class="hots">世界欠我一个初恋</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_5">熊本熊</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_6" class="hots">火影忍者</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_7" class="hots">飞行少年</a>
+                </div>
+
+                <!-- 热搜结束 -->
+
+            </div>
+
+            <!-- 搜索框部分结束 -->
+
+        </div>
+    </div>
+
+    <!-- 头部结束 -->
+
+    <!-- 主体导航 -->
+
+    <div id="main_nav">
+        <div class="container">
+            <ul class="nav-box" id="j-navLinkBar">
+                <li class="indexActive active"><a class="first_nav" href="">首页</a></li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                    秒杀
+                    </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                    京东优选
+                    </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                    i71
+                    </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                    Apple
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 导航结束 -->
+
+    <!-- 轮播图开始 -->
+
+    <div id="banner">
+        <div class="pb-carouselWarp demo2">
+            <ul class="pb-carousel">
+                <li class="pb-this">
+                    <a href="
+                    "><img src="../img/8cacc6e975df48c0a4bd8d86c930a9f2.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../img/8f90ca7c5d054f9784e66595f4f0a796.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../img/14cf7d9e17184ad381f2cb1432e2bdc6.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../img/651a3a4b9386434aa70d9101975e5f2c.jpg" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="../img/985cc25e5006410f839ca128f7447ac8.jpg" alt="" />
+
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../img/f12d49aa600f4260ade76bff2182af65.jpg" alt="" />
+                    </a>
+                </li>
+            </ul>
+            <ul class="pb-carousel-ind">
+                <li class="pb-this"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <button class="pb-arrow pb-arrow-prev"></button>
+            <button class="pb-arrow pb-arrow-next" id="aa"></button>
+        </div>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/banner.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        carousel(
+            $('.demo2'), //必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+            {
+                type: 'fade', //可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
+                arrowtype: 'move', //可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )
+                autoplay: true, //可选，默认true - true / false (开启轮播/关闭轮播)
+                time: 4000 //可选，默认3000
+            }
+        );
+    </script>
+
+    <!-- 轮播图结束 -->
+
+    <!-- 广告开始 -->
+
+    <div id="ad">
+        <div class="container">
+            <div class="topBanner_unclose">
+                <a href="" target="_blank">
+                    <img src="../img/49a4cf04cdd44d11af508955e69db8c0.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 广告结束 -->
+
+    <!-- 每日精选开始 -->
+    <div id="selection">
+        <div class="container">
+
+            <!-- 每日精选头部开始 -->
+
+            <div class="sel_head">
+                <!-- 头部左侧 -->
+                <div class="sel_head_left pull-left">
+
+                    <i class="sel_head_left-headerIcon"></i>
+                    <span class="sel_head_left-headerTitle">每日精选</span>
+                    <span class="sel_head_left-headerSlide"></span>
+                    <span class="sel_head_left-headerSubTitle">SELECTED SPIKE</span>
+
+                </div>
+
+                <!-- 头部右侧 -->
+                <div class="sel_head_right pull-left">
+                    <a href="">
+                        更多>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- 每日精选头部结束 -->
+
+            <!-- 每日精选主体 -->
+
+            <div class="sel_main">
+
+            </div>
+        </div>
+    </div>
 
 </body>
 
