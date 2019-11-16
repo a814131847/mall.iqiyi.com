@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱奇艺商品</title>
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/main"></script>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+    <!-- 头部导航条 -->
+
+    <div id="tab-container">
+        <div class="container">
+
+            <!-- 左边部分 -->
+
+            <div class="top-navLeft pull-left col-md-6">
+                <span class="pull-left welcome">欢迎来到爱奇艺商城</span>
+                <div class="loginmenu pull-left center-block">
+                    <a href="javascript" class="login">请登录</a>
+                    <a href="javascript" class="reg">免费注册</a>
+                </div>
+            </div>
+
+            <!-- 右边部分 -->
+
+            <div class="top-navRight pull-right col-md-6">
+                <div class="topNav_orders pull-left">
+                    <a class="topMenuCar_link" href="javascript">
+                        <span class="iconfont icon-gouwuchekong"></span>
+                        <span class="topR_txt">购物车<i  data-elem="cartnum" class="orange">0</i>件</span>
+                    </a>
+                </div>
+                <div class="topNav_orders pull-left">
+                    <a class="myOrders_link" href="javascript">
+                        <span class="iconfont icon-wenjian"></span>
+                        <span class="topR_txt">买家中心</span>
+                    </a>
+                </div>
+                <div class="topNav_orders pull-left">
+                    <a class="myFavo_link" href="javascript">
+                        <span class="iconfont icon-wodeshoucang"></span>
+                        <span class="topR_txt">我的收藏</span>
+
+                    </a>
+                </div>
+                <div class="top_cutline pull-left QR">
+                    <a class="watch_link text-center" href="javascript">
+                        <span class="iconfont icon-saoyisao"></span>
+                        <span class="topR_txt">关注我们</span>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <div id="QRcode">
+                            <div class="QR_L">
+                                <img src="../img/QR.jpg">
+                            </div>
+                            <div class="QR_R">
+                                <p>微信扫一扫</p>
+                                <p>了解商城动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="top_cutline pull-left">
+                    <a class="bus_link text-center" href="javascript">
+                        <span class="iconfont icon-shangjia"></span>
+                        <span class="topR_txt">商家中心</span>
+                    </a>
+                </div>
+                <div class="top_cutline pull-left">
+                    <a class="index_link text-center" href="javascript">
+                        <span class="topR_txt">爱奇艺首页</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部导航结束 -->
+
+    <!-- 头部开始 -->
+
+    <div id="head">
+        <div class="container">
+
+            <!-- logo开始 -->
+
+            <div class="head_logo pull-left">
+                <a href="">
+                    <img src="../img/logo1126.png" alt="" title="爱奇艺商城">
+                </a>
+            </div>
+
+            <!-- logo结束 -->
+
+            <!-- 搜索部分开始 -->
+
+            <div id="head_searchBox" class="pull-left">
+
+                <!-- 搜索框开始 -->
+
+                <div class="container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="亲爱的热爱的">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">搜索</button>
+                            </span>
+                    </div>
+                </div>
+
+                <!-- 搜索框结束 -->
+
+                <!-- 热搜开始 -->
+
+                <div class="search_hots">
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_1">漫威</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_2" class="hots">银河补习班</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_3">i71定制</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_4" class="hots">世界欠我一个初恋</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_5">熊本熊</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_6" class="hots">火影忍者</a>
+                    <div class="top_cutline "></div>
+                    <a href="#" target="_blank" rseat="mall_searchbox_hotwords_7" class="hots">飞行少年</a>
+                </div>
+
+                <!-- 热搜结束 -->
+
+            </div>
+
+            <!-- 搜索框部分结束 -->
+
+        </div>
+    </div>
+
+    <!-- 头部结束 -->
+
+    <!-- 主体导航 -->
+
+    <div id="main_nav">
+        <div class="container">
+            <ul class="nav-box" id="j-navLinkBar">
+                <li class="indexActive "><a class="first_nav" href="">首页</a></li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                        秒杀
+                        </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                        京东优选
+                        </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                        i71
+                        </a>
+                </li>
+
+                <li>
+                    <a class="first_nav" href=''>
+                        Apple
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 导航结束 -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 页尾开始 -->
+
+    <!-- 页尾上半部分 -->
+
+    <div class="footer_top">
+        <div class="container">
+
+            <!-- 列表盒子开始 -->
+
+            <div class="footer_icons_ListBox">
+
+                <!-- 第一个列表 -->
+
+                <div class="footer_icons_List">
+                    <ul class="icons_list">
+                        <li class="iconbox">
+                            <div class="iconImg"><img src="../img/footer_redzhengLogo.png" alt="全球精选 品牌保障" width="70" height="70"></div>
+                            <div class="iconText">
+                                <p>全球精选</p>
+                                <p>品质保障</p>
+                            </div>
+                        </li>
+                        <li class="iconbox">
+                            <div class="iconImg"><img src="../img/footer_redmoneyLogo.png" alt="限时特卖 甄选好货" width="70" height="70"></div>
+                            <div class="iconText">
+                                <p>限时特卖</p>
+                                <p>甄选好货</p>
+                            </div>
+                        </li>
+                        <li class="iconbox">
+                            <div class="iconImg"><img src="../img/footer_redgoodLogo.png" alt="爱奇艺电商 口碑推荐" width="70" height="70"></div>
+                            <div class="iconText">
+                                <p>爱奇艺电商</p>
+                                <p>口碑推荐</p>
+                            </div>
+                        </li>
+                        <li class="iconbox">
+                            <div class="iconImg"><img src="../img/footer_redvideoLogo.png" alt="直播购物 看好就买" width="70" height="70"></div>
+                            <div class="iconText">
+                                <p>直播购物</p>
+                                <p>看好就买</p>
+                            </div>
+                        </li>
+                        <li class="iconbox">
+                            <div class="iconImg"><img src="../img/footer_redcollectLogo.png" alt="热剧同款 必追单品" width="70" height="70"></div>
+                            <div class="iconText">
+                                <p>热剧同款</p>
+                                <p>必追单品</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 第一个列表结束 -->
+
+                <!-- 第二个列表开始 -->
+
+                <div class="footer_icons_List_second">
+                    <ul class="codes_list">
+                        <li class="codeBox" style="width: 20%;">
+                            <div class="codeNarrate"><a href="" class="footer_explain_first">购物指南</a><a href="" class="footer_explain_other">购物流程</a><a href="" class="footer_explain_other">发票制度</a>
+                                <a href="" class="footer_explain_other">账户管理</a>
+                            </div>
+                        </li>
+                        <li class="codeBox" style="width: 20%;">
+                            <div class="codeNarrate"><a href="" class="footer_explain_first">支付方式</a><a href="" class="footer_explain_other">支付宝</a><a href="" class="footer_explain_other">微信</a>
+                                <a href="" class="footer_explain_other">银行卡</a>
+                            </div>
+                        </li>
+                        <li class="codeBox" style="width:  20%;">
+                            <div class="codeNarrate"><a href="" class="footer_explain_first">服务保障</a><a href="" class="footer_explain_other">发货时间</a><a href="" class="footer_explain_other">运费说明</a><a href="" class="footer_explain_other">退换货规则</a></div>
+                        </li>
+                        <li class="codeBox" style="width:  20%;">
+                            <div class="codeNarrate"><a href="" class="footer_explain_first">售后客服</a><a href="" class="footer_explain_other">订单查询</a><a href="" class="footer_explain_other">物流查询</a><a href="/" class="footer_explain_other">客服联系</a></div>
+                        </li>
+                        <li class="codeBox" style="width:  20%;">
+                            <div class="codeNarrate"><a href="" class="footer_explain_first">服务协议</a><a href="" class="footer_explain_other">服务说明</a><a href="" class="footer_explain_other">使用规则</a><a href="" class="footer_explain_other">信息保护</a></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 第二个列表结束 -->
+
+                <!-- 第三个列表（二维码） -->
+
+                <div class="footer_codes_List">
+                    <ul class="codes_list">
+                        <li class="codeBox">
+                            <div class="codeImg"><img src="../img/iqiyi_mall_code.png" alt="爱奇艺商城手机版" width="120" height="120"></div>
+                            <div class="codeNarrate">
+                                <h1>爱奇艺商城手机版</h1>
+                                <p>爱奇艺商城-购享娱乐</p>
+                                <p>精彩在手，说有就有</p>
+                                <p>手机购物更方便</p>
+                            </div>
+                        </li>
+                        <li class="codeBox">
+                            <div class="codeImg"><img src="../img/iqiyi_mall_num.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
+                            <div class="codeNarrate">
+                                <h1>爱奇艺商城微信</h1>
+                                <p>关注微信</p>
+                                <p>提前了解爱奇艺商城</p>
+                                <p>最新咨询</p>
+                            </div>
+                        </li>
+                        <li class="codeBox">
+                            <div class="codeImg"><img src="../img/iqiyi_mall_ring.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
+                            <div class="codeNarrate">
+                                <h1>爱奇艺商城微信(订阅号)</h1>
+                                <p>关注微信订阅号</p>
+                                <p>订阅一种生活方式</p>
+                                <p>发现时尚趣味</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 第三个列表结束 -->
+
+            </div>
+
+            <!-- 列表盒子结束 -->
+
+
+        </div>
+    </div>
+
+    <div id="footer_down">
+        <div class="container">
+            <!-- 底部链接开始 -->
+
+            <div class="mod_footer_links">
+                <!-- 牌照 -->
+                <div class="ftcont" style="padding-top:20px;" id="data-paizhao-div">
+                    <ul id="data-paizhao" class="ftList clearfix">
+                        <li>
+                            <div class="mb10"><a href="javascript:void(0);" title="京网文[2018]6272-484号">京网文[2018]6272-484号</a></div>
+                            <div class="mb10"><a href="" target="_blank" title="京ICP备11032965号">京ICP备11032965号</a></div>
+                        </li>
+                        <li>
+                            <div class="mb10">
+                                <a href="" target="_blank" title="中国互联网诚信联盟">
+                                    <img src="../img/hlw.png" alt="中国互联网诚信联盟">中国互联网诚信联盟</a>
+                            </div>
+                            <div class="mb10">
+                                <a href="" target="_blank" title="经营性网站备案信息">
+                                    <img src="../img/jyx.png" alt="经营性网站备案信息">&nbsp;经营性网站备案信息
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mb10"><a href="javascript:void(0)" target="_blank" title="出版物经营许可证">出版物经营许可证 </a> </div>
+                            <div class="mb10"><em rseat="京公网安备 11010802020024号" style="color: #777;" href="" target="_blank">京公网安备 11010802020024号</em></div>
+                        </li>
+                        <li>
+                            <div class="mb10"><a href="javascript:void(0);" title="信息网络传播视听节目许可证 0110544号">信息网络传播视听节目许可证 0110544号</a></div>
+                            <div class="mb10"><a href="javascript:void(0);" title="增值电信业务经营许可证 B2-20120273">增值电信业务经营许可证 B2-20120273</a></div>
+                        </li>
+                        <li class="last">
+                            <div class="mb10"><a href="javascript:void(0);" title="广播电视节目制作经营许可证 (京)字第1938号">广播电视节目制作经营许可证 (京)字第1938号</a></div>
+                            <div class="mb10"><a href="javascript:void(0);" title="互联网药品信息服务资格证书">互联网药品信息服务资格证书</a></div>
+                        </li>
+                    </ul>
+
+                    <!-- 执照 -->
+                    <ul class="ftList clearfix">
+                        <li>
+                            <div class="mb10"><a href="javascript:void(0);" title="食品许可证JY11108111598788" target="_blank">食品许可证JY11108111598788</a></div>
+                        </li>
+                        <li class="mb10">
+                            <a rel="nofollow" href="" target="_blank" title="营业执照" class="law-link ">营业执照</a>
+                        </li>
+                        <li class="mb10" style="margin-left: 60px;">
+                            <a rel="nofollow" href="" target="_blank" title="网络文化经营许可证" class="law-link ">网络文化经营许可证</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 公司介绍 -->
+                <div class="footmenu">
+                    <a href="" title="公司介绍" target="_blank">公司介绍</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="新闻动态" target="_blank">新闻动态</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="联系方式" target="_blank">联系方式</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="招聘英才" target="_blank">招聘英才</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="爱奇艺实验室" target="_blank">爱奇艺实验室</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="开放平台" target="_blank">开放平台</a>
+                    <i class="cutline">|</i>
+                    <a href="" title="爱奇艺内容合作标准" target="_blank">爱奇艺内容合作标准</a>
+                    <i class="cutline">|</i>
+                    <a href="" class="s1" title="爱奇艺号" target="_blank">爱奇艺号</a>
+                    <i class="cutline">|</i>
+                    <a href="" rel="nofollow" title="安全应急响应中心" target="_blank">安全应急响应中心</a>
+                    <i class="cutline">|</i>
+                    <a href="" rel="nofollow" title="帮助中心" target="_blank">帮助中心</a>
+                    <i class="cutline">|</i>
+                    <a href="" rel="nofollow" title="侵权投诉" target="_blank">侵权投诉</a>
+                </div>
+
+                <!-- 举报中心 -->
+                <div class="clearfix tc">
+                    <a title="中国互联网举报中心" target="_blank" href=""><img alt="中国互联网举报中心" src="../img/jbzx.png"><span style="color:#666;">中国互联网举报中心</span></a>
+                    <a title="网络举报APP下载" target="_blank" href=""><span class="ml30" style="color:#666;">网络举报APP下载</span></a>
+                    <a title="网上有害信息举报专区" target="_blank" href=""><span class="ml30" style="color:#666;">网上有害信息举报专区</span></a>
+                    <a title="网上暴恐有害信息举报" target="_blank" href=""><span class="ml30" style="color:#666;">网上暴恐有害信息举报</span></a>
+                    <a title="儿童色情信息举报专区" target="_blank" href=""><span class="ml30" style="color:#666;">儿童色情信息举报专区</span></a>
+                    <span class="ml30">违法和不良信息举报电话：400-923-7171</span><span class="ml30 mr30">举报邮箱：<a href="" style="color:#666;">jubao365@qiyi.com</a></span>
+                </div>
+
+
+                <div class="copyright" style="padding: 5px 0 5px 0;">
+                    <a href="" target="_blank" title="反盗版和反盗链权利声明" rseat="反盗版和反盗链权利声明">反盗版和反盗链权利声明</a>&nbsp;&nbsp;&nbsp; Copyright © 2018 <a href="//www.iqiyi.com/" title="爱奇艺" rseat="爱奇艺">爱奇艺</a> <span rseat="© 2016 iQIYI.COM"> All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
