@@ -1,10 +1,12 @@
 require.config({
     paths: {
         jquery: '../../node_modules/jquery/dist/jquery.min',
-        banner: './banner'
+        banner: './banner',
+
     },
     shim: {
         banner: ['jquery']
+
     }
 });
 
@@ -29,3 +31,21 @@ require.config({
 //         }
 //     );
 // })
+
+
+// require(['carousel'], function(Carousel) {
+//     var carousel1 = new Carousel();
+//     carousel1.init({
+//         buttonType: 'circle',
+//         btnPos: 'center',
+//         selector: '#content1',
+//         imgData: ['../img/4703abee72a84501b8a4429f772ff580.jpg', '../img/8f90ca7c5d054f9784e66595f4f0a796.jpg', '../img/14cf7d9e17184ad381f2cb1432e2bdc6.jpg', '../img/651a3a4b9386434aa70d9101975e5f2c.jpg', '../img/985cc25e5006410f839ca128f7447ac8.jpg', '../img/f12d49aa600f4260ade76bff2182af65.jpg']
+//     });
+//     var carousel2 = new Carousel(); //两个轮播图，互不影响
+//     carousel2.init({
+//         buttonType: 'square',
+//         btnPos: 'bottom',
+//         selector: '#content2',
+//         imgData: ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg']
+//     });
+// });

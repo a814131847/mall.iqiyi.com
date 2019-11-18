@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>爱奇艺商城</title>
     <link rel="stylesheet" href="../font/iconfont.css">
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../../node_modules/requirejs/require.js" data-main="../js/main"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../style/index.css">
 </head>
 
@@ -23,8 +25,56 @@
             <div class="top-navLeft pull-left col-md-6">
                 <span class="pull-left welcome">欢迎来到爱奇艺商城</span>
                 <div class="loginmenu pull-left center-block">
-                    <a href="javascript" class="login">请登录</a>
-                    <a href="javascript" class="reg">免费注册</a>
+                    <a href="" class="login " data-toggle="modal" data-target="#myModal">请登录</a>
+                    <a href="" class="reg" data-toggle="modal" data-target="#myModal">免费注册</a>
+                </div>
+            </div>
+
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+
+                        <!-- 选项卡 -->
+                        <div>
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <span class="title-dot"></span> 短信登录注册
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="sub-title">登录过程中会用到短信，请准备好您的手机</p>
+                                <div class="info-container" data-regbox="nameContainer">
+                                    <!-- 鼠标点击输入，添加类accountIn -->
+                                    <div class="country-container">
+                                        <span class="country-incon" data-regbox="zoneArea">
+                                            <a href="javascript:;" class="country-link" data-regbox="selectedZone" rseat="psprt_region" data-key="86">中国大陆</a>                                                
+                                        </span>
+                                    </div>
+                                    <!-- <p class="errorInfo"><span>手机号格式错误,请重新输入</span></p> -->
+                                    <div class="tip-container tip-account-container" data-regbox="nameInputArea">
+                                        <p class="tip-info tip-info-active" data-regbox="nameTip" style="display: none;">请输入手机号</p>
+                                        <input type="text" class="txt-info txt-account" data-regbox="name" maxlength="25">
+                                    </div>
+                                </div>
+                                <a href="" class="btn-green btn-login btn-gray" data-regbox="stepOneBtn" rseat="pslgp_smsbtn">下一步</a>
+                                <p class="protocol-con">登录即代表您同意<a href="" target="_blank" class="protocol-link">用户协议</a>和<a href="" target="_blank" class="protocol-link">隐私政策</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- 选项卡 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -139,6 +189,27 @@
 
             <!-- 搜索框部分结束 -->
 
+            <!-- 右侧广告开始 -->
+
+            <div class="headAd">
+                <div class="arrow-item">
+                    <span class="arrow-left"></span>
+                    <span class="arrow-right"></span>
+                </div>
+                <ul class="header-pro">
+
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="../img/kuqi.jpg" width="50" height="50" alt="" ">
+                            <p><b title="酷奇高清VR">酷奇高清VR</b><span title="虚拟现实智能眼镜">虚拟现实智能眼镜</span></p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 右侧广告结束 -->
+
         </div>
     </div>
 
@@ -186,8 +257,9 @@
         <div class="pb-carouselWarp demo2">
             <ul class="pb-carousel">
                 <li class="pb-this">
-                    <a href="
-                    "><img src="../img/8cacc6e975df48c0a4bd8d86c930a9f2.jpg" alt="" /></a>
+                    <a href="">
+                        <img src="../img/4703abee72a84501b8a4429f772ff580.jpg" alt="" />
+                    </a>
                 </li>
                 <li>
                     <a href="">
@@ -205,8 +277,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href=""><img src="../img/985cc25e5006410f839ca128f7447ac8.jpg" alt="" />
-
+                    <a href="">
+                        <img src="../img/985cc25e5006410f839ca128f7447ac8.jpg" alt="" />
                     </a>
                 </li>
                 <li>
@@ -240,6 +312,13 @@
             }
         );
     </script>
+
+
+
+
+
+
+
 
     <!-- 轮播图结束 -->
 
@@ -1297,6 +1376,13 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <!-- 登录注册 -->
+
+
 
 
 </body>
