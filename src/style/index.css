@@ -1432,6 +1432,7 @@ a:hover {
 #main-top .container .main-top-pro .pro-left {
   float: left;
   width: 420px;
+  position: relative;
 }
 #main-top .container .main-top-pro .pro-left .pro-left-pic {
   position: relative;
@@ -1471,6 +1472,48 @@ a:hover {
 #main-top .container .main-top-pro .pro-left .small-pic ul li .actived {
   padding: 0!important;
   border: 2px solid #ee394b !important;
+}
+#main-top .container .main-top-pro .pro-left .movebox {
+  position: absolute;
+  background-color: orange;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  cursor: move;
+  border: 1px solid #ccc;
+  display: none;
+  width: 100px;
+  height: 100px;
+}
+#main-top .container .main-top-pro .pro-left .small {
+  position: relative;
+}
+#main-top .container .main-top-pro .pro-left .big {
+  width: 500px;
+  height: 500px;
+  float: left;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  margin-left: 10px;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 426px;
+  z-index: 20;
+}
+#main-top .container .main-top-pro .pro-left .big .bigpic {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#main-top .container .main-top-pro .pro-left .fdjshow {
+  display: block;
+}
+#main-top .container .main-top-pro .pro-left .fdjhide {
+  display: none;
+}
+#main-top .container .main-top-pro .pro-left .border {
+  border: 2px solid #ee394b;
 }
 #main-top .container .main-top-pro .pro-left .share {
   width: 420px;
@@ -1648,4 +1691,189 @@ a:hover {
   background: url(../img/detail-icon.png) no-repeat -22px 0;
   display: inline-block;
   vertical-align: -1px;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi {
+  float: left;
+  width: 759px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi .yunfei {
+  float: left;
+  text-align: left;
+  width: 66px;
+  color: #777;
+  line-height: 12px;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi .postAge {
+  float: left;
+  color: #777;
+  margin-bottom: 5px;
+  line-height: 12px;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi .postAge .deliveryAdd {
+  color: #3c3c3c;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi .postAge .desc {
+  margin: 0 3px;
+  color: #999;
+}
+#main-top .container .main-top-pro .pro-right .kuaidi .postAge .addr-info {
+  margin-right: 10px;
+  cursor: pointer;
+}
+#main-top .container .main-top-pro .pro-right .yanse {
+  float: left;
+  width: 759px;
+  text-align: left;
+  font-size: 12px;
+}
+#main-top .container .main-top-pro .pro-right .yanse .yansefenlei {
+  float: left;
+  text-align: left;
+  width: 66px;
+  color: #777;
+  line-height: 12px;
+}
+#main-top .container .main-top-pro .pro-right .yanse .choose {
+  overflow: hidden;
+  vertical-align: middle;
+  width: 294px;
+  float: left;
+  margin-bottom: 5px;
+}
+#main-top .container .main-top-pro .pro-right .yanse .choose ul {
+  margin-top: -10px;
+  float: left;
+}
+#main-top .container .main-top-pro .pro-right .yanse .choose ul li {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+  height: 24px;
+  padding: 2px 10px;
+  border: 1px solid #999;
+  line-height: 20px;
+  background-color: #fff;
+  color: #3c3c3c;
+}
+#main-top .container .main-top-pro .pro-right .kucun {
+  float: left;
+  width: 759px;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+#main-top .container .main-top-pro .pro-right .kucun .shuliang {
+  float: left;
+  text-align: left;
+  width: 66px;
+  color: #777;
+  line-height: 12px;
+}
+#main-top .container .main-top-pro .pro-right .kucun .num {
+  float: left;
+}
+#main-top .container .main-top-pro .pro-right .kucun .num input {
+  height: 30px;
+  width: 82px;
+  text-align: center;
+}
+#main-top .container .main-top-pro .pro-right .kucun .num .amount_erro {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  padding-left: 10px;
+  color: #3c3c3c;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche {
+  float: left;
+  margin-top: 15px;
+  widows: 739px;
+  height: 40px;
+  width: 100%;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn {
+  display: inline-block;
+  width: 148px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn-buy {
+  background-color: #ee394b;
+  border: 1px solid #ee394b;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn-buy:hover {
+  background-color: #f65063;
+  border: 1px solid #f65063;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn-cart {
+  background-color: #fd7b7b;
+  border: 1px solid #fd7b7b;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn-cart:hover {
+  background: #fc9797;
+  border: 1px solid #fc9797;
+}
+#main-top .container .main-top-pro .pro-right .jiarugouwuche .detail-btn-cart i {
+  line-height: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url(../img/detail_icon4.png) no-repeat;
+  background-position: 0 -20px;
+  vertical-align: -3px;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo {
+  margin-top: 30px;
+  float: left;
+  width: 100%;
+  height: 22px;
+  position: relative;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .promise {
+  font-size: 12px;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .promise li {
+  margin-right: 15px;
+  float: left;
+  font-size: 0;
+  vertical-align: middle;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .promise .promiseTitle {
+  margin-right: 0;
+  font-size: 12px;
+  color: #777;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .promise .proPic {
+  float: left;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url(../img/mall_58a66acff6882e5fa5910cc9_1x1.png) no-repeat;
+  background-size: 16px;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .promise .proItem {
+  vertical-align: middle;
+  font-size: 12px;
+  color: #777;
+}
+#main-top .container .main-top-pro .pro-right .fuwuchengnuo .pay-box {
+  float: right;
+  font-size: 12px;
+  color: #777;
+  line-height: 22px;
+  margin-right: 28px;
+  vertical-align: middle;
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  padding-right: 18px;
 }

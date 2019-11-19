@@ -1637,7 +1637,7 @@ a:hover {
            .pro-left {
                 float: left;
                 width: 420px;
-
+                position: relative;
                 // 大图
 
                .pro-left-pic {
@@ -1686,6 +1686,58 @@ a:hover {
                         }
                     }    
                 }
+
+
+                // 放大镜相关
+
+                .movebox {
+                    position: absolute;
+                    background-color: orange;
+                    opacity: .3;
+                    top: 0;
+                    left: 0;
+                    cursor: move;
+                    border: 1px solid #ccc;
+                    display: none;
+                    width: 100px;
+                    height: 100px;
+                }
+                .small {
+                    position: relative;
+                }
+
+                .big {
+                    width: 500px;
+                    height: 500px;
+                    float: left;
+                    border: 1px solid #ccc;
+                    overflow: hidden;
+                    margin-left: 10px;
+                    display: none;
+                    position: absolute;
+                    top:0px;
+                    left:426px;
+                    z-index: 20;
+                    .bigpic {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        // height: 100%;
+                        // width: 100%;
+                    }
+                }
+                .fdjshow {
+                    display: block;
+                }
+                
+                .fdjhide {
+                    display: none;
+                }
+                .border {
+                    border:2px solid #ee394b
+                }
+                
+                
 
                 // 分享
 
@@ -1750,6 +1802,8 @@ a:hover {
                 // background: #f66a11;
                 .pro-right-title {
 
+
+                    // 头部
                     .detail-title {
                         overflow: hidden;
                         color: #333;
@@ -1762,6 +1816,9 @@ a:hover {
 
                     }
                 }
+
+
+                // 价格
 
                 .detail_price {
                     margin-top: 20px;
@@ -1844,6 +1901,9 @@ a:hover {
                 }
                 
 
+
+                // 评价
+
                 .detail-evaluate {
                     padding: 15px 0 10px 0;
                     border-bottom: 1px dotted #c8c8c8;
@@ -1881,7 +1941,224 @@ a:hover {
                         vertical-align: -1px
                     }
                 }
+
+
+                // 快递开始
+
+                .kuaidi {
+                    float: left;
+                    width: 759px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    font-size:12px;
+                    .yunfei {
+                        float: left;
+                        text-align: left;
+                        width:66px;
+                        color:#777;
+                        line-height: 12px;
+                    }
+                    .postAge {
+                        float: left;
+                        color: #777;
+                        margin-bottom:5px;
+                        line-height: 12px;;
+                        .deliveryAdd {
+                            color: #3c3c3c;
+                        } 
+                        .desc {
+                            margin: 0 3px;
+                            color: #999;
+                        }  
+                        .addr-info {
+                            margin-right: 10px;
+                            cursor: pointer;
+                         
+                        }                    
+                    }
+
+                }
+
+                // 快递结束
+
+                // 颜色分类开始
+
+                .yanse {
+                    float: left;
+                    width: 759px;
+                    text-align: left;
+                    // margin-bottom: 10px;
+                    font-size:12px;
+                    .yansefenlei {
+                        float: left;
+                        text-align: left;
+                        width:66px;
+                        color:#777;
+                        line-height: 12px;
+                    }
+                    .choose {
+                        overflow: hidden;
+                        vertical-align: middle;
+                        width: 294px;
+                        float: left;
+                        margin-bottom:5px;
+                        ul {
+                            margin-top: -10px;
+                            float: left;
+                            li {
+                                float: left;
+                                margin-right: 10px;
+                                margin-top: 10px;
+                                height: 24px;
+                                padding: 2px 10px;
+                                border: 1px solid #999;
+                                line-height: 20px;
+                                background-color: #fff;
+                                color: #3c3c3c;
+                            }
+                        }
+                    }
+
+                }
+                
+                // 颜色分类结束
+
+                // 数量开始
+
+                .kucun {
+                    float: left;
+                    width: 759px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    font-size:12px;
+                    .shuliang {
+                        float: left;
+                        text-align: left;
+                        width:66px;
+                        color:#777;
+                        line-height: 12px;
+                    }
+                    .num {
+                        float: left;
+                        input {
+                            height:30px;
+                            width: 82px;
+                            text-align: center;
+                        }
+                        .amount_erro {
+                            height: 30px;
+                            line-height: 30px;
+                            display: inline-block;
+                            padding-left: 10px;
+                            color: #3c3c3c
+                        }
+                    }
+                }
+
+                // 数量结束
+
+                // 加入购物车开始
+
+                .jiarugouwuche {
+                    float: left;
+                    margin-top:15px;
+                    widows: 739px;
+                    height:40px;
+                    width: 100%;
+                    .detail-btn {
+                        display: inline-block;
+                        width: 148px;
+                        height: 38px;
+                        line-height: 38px;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 16px;
+                        vertical-align: middle;
+                        border-radius: 2px;
+                    }
+                    .detail-btn-buy {
+                        background-color: #ee394b;
+                        border: 1px solid #ee394b;
+                        &:hover {
+                            background-color: #f65063;
+                            border: 1px solid #f65063;
+                        }
+                    }
+                    .detail-btn-cart {
+                        background-color: #fd7b7b;
+                        border: 1px solid #fd7b7b;
+                        &:hover {
+                            background: #fc9797;
+                            border: 1px solid #fc9797
+                        }
+                        i { 
+                            line-height: 20px;
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin-right:5px;
+                            background: url(../img/detail_icon4.png) no-repeat ;
+                            background-position: 0 -20px;
+                            vertical-align: -3px;
+                            
+                        }
+                    }
+                }
+
+                // 加入购物车结束
+
+                // 服务承诺开始
+
+                .fuwuchengnuo {
+                    margin-top: 30px;
+                    float: left;
+                    width: 100%;
+                    height:22px;
+                    position: relative;
+                    .promise {
+                        font-size:12px;
+                        li {
+                            margin-right: 15px;
+                            float: left;
+                            font-size: 0;
+                            vertical-align: middle;
+                        }
+                        .promiseTitle {
+                            margin-right: 0;
+                            font-size: 12px;
+                            color: #777
+                        }
+                        .proPic {
+                            float: left;
+                            vertical-align: middle;
+                            width: 16px;
+                            height: 16px;
+                            background: url(../img/mall_58a66acff6882e5fa5910cc9_1x1.png) no-repeat;
+                            background-size:16px;
+                        }
+                        .proItem {
+                            vertical-align: middle;
+                            font-size: 12px;
+                            color: #777
+                        }
+                    }
+                    .pay-box {
+                        float: right;
+                        font-size: 12px;
+                        color:#777;
+                        line-height: 22px;
+                        margin-right:28px;
+                        vertical-align: middle;
+                        position:absolute;
+                        top:-2px;
+                        right:0px;
+                        padding-right:18px;
+                        // background: url(../img/arrow-bottom.png) no-repeat center right;
+                    }
+                }
             }
+
+
         }
 
          
