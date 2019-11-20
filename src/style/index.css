@@ -13,6 +13,15 @@ ul {
 a:hover {
   text-decoration: none;
 }
+a:visited {
+  text-decoration: none;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
 #tab-container {
   width: 100%;
   height: 32px;
@@ -50,12 +59,21 @@ a:hover {
   border-radius: 0;
   background: #fff url(../img/login-logo.png) no-repeat;
 }
+#tab-container .modal-content .reg-part,
+#tab-container .modal-content .log-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 367px;
+  width: 458px;
+}
 #tab-container .modal-content .close {
   position: absolute;
   right: 14px;
   top: 12px;
   width: 25px;
   height: 25px;
+  z-index: 80;
   background: url(../img/login-tn.png) no-repeat 5px -44px;
 }
 #tab-container .modal-content .close:hover {
@@ -101,67 +119,73 @@ a:hover {
   color: #5aa700;
   text-decoration: none;
 }
-#tab-container .modal-content .modal-body .btn-login {
+#tab-container .modal-content .modal-body .btn-green {
   height: 48px;
   line-height: 48px;
   font-size: 16px;
   display: block;
-  margin-top: 80px;
+  margin-top: 55px;
   text-align: center;
   color: #fff;
   background-color: #5aa700;
   text-decoration: none;
 }
-#tab-container .modal-content .modal-body .info-container {
-  height: 78px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+#tab-container .modal-content .modal-body .btn-gray {
+  opacity: 0.4;
+  pointer-events: none;
 }
-#tab-container .modal-content .modal-body .info-container .country-container {
-  margin-top: 48px;
-  color: #333;
+#tab-container .modal-content .modal-body .info-container {
+  height: 98px;
+  position: relative;
+  padding: 20px 0;
+}
+#tab-container .modal-content .modal-body .info-container .form-group {
+  height: 100%;
+  width: 100%;
+  padding: 0 5px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+}
+#tab-container .modal-content .modal-body .info-container .form-group input {
+  outline: none;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+#tab-container .modal-content .modal-body .info-container .form-group label {
+  font-size: 16px;
+  font-weight: 500;
+}
+#tab-container .modal-content .modal-body .info-container .form-group .p1 {
+  position: absolute;
+  top: 55px;
+  left: 95px;
+}
+#tab-container .modal-content .modal-body .info-container .form-group .p2 {
+  position: absolute;
+  top: 112px;
+  left: 95px;
+}
+#tab-container .modal-content .modal-footer {
+  height: 53px;
+  background-color: #f7f7f7;
+  position: absolute;
+  bottom: 0;
+  height: 51px;
+  width: 458px;
+}
+#tab-container .modal-content .modal-footer a {
+  color: #999;
   font-size: 16px;
   cursor: pointer;
-  float: left;
-  position: relative;
-  z-index: 3;
 }
-#tab-container .modal-content .modal-body .info-container .country-container .country-incon {
-  width: 118px;
-}
-#tab-container .modal-content .modal-body .info-container .country-container .country-incon a {
-  max-width: 94px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  float: left;
-  color: #333;
+#tab-container .modal-content .modal-footer a:hover {
+  color: #5aa700;
   text-decoration: none;
 }
-#tab-container .modal-content .modal-body .info-container .errorInfo {
-  color: #f94343;
-  font-size: 12px;
-  padding-top: 26px;
-  float: left;
-}
-#tab-container .modal-content .modal-body .info-container .tip-container {
-  position: relative;
-  float: left;
-}
-#tab-container .modal-content .modal-body .info-container .tip-container .tip-info {
-  font-size: 16px;
-  color: #aaa;
-  position: absolute;
-  top: 5px;
-  left: 0;
-}
-#tab-container .modal-content .modal-body .info-container .tip-container .txt-info {
-  width: 190px;
-  border: 0;
-  outline: 0;
-  color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+#tab-container .modal-content .modal-footer .reg-link {
+  margin-right: 18px;
 }
 #tab-container .top-navRight {
   height: 100%;

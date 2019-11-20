@@ -14,6 +14,16 @@ a:hover {
     text-decoration: none;
 }
 
+a:visited {
+    text-decoration: none;
+}
+.green {
+    color:green;
+}
+.red {
+    color:red
+}
+
 // 头部导航条
 #tab-container {
     width: 100%;
@@ -56,12 +66,20 @@ a:hover {
         overflow: hidden;
         border-radius: 0;
         background:#fff url(../img/login-logo.png) no-repeat;
+        .reg-part,.log-part {
+            position: absolute;
+            top:0;
+            left:0;
+            height:367px;
+            width: 458px;
+        } 
         .close {
             position: absolute;
             right: 14px;
             top: 12px;
             width: 25px;
             height: 25px;
+            z-index: 80;
             background: url(../img/login-tn.png) no-repeat 5px -44px;
             &:hover {
                 background-position: -40px -44px;
@@ -110,68 +128,84 @@ a:hover {
                     text-decoration: none;
                 }
             }
-            .btn-login {
+            .btn-green {
                 height: 48px;
                 line-height: 48px;
                 font-size: 16px;
                 display: block;
-                margin-top: 80px;
+                margin-top: 55px;
                 text-align: center;
                 color: #fff;
                 background-color: #5aa700;
                 text-decoration: none;
             }
+            .btn-gray {
+                opacity: 0.4;
+                pointer-events: none;
+            }
             .info-container {
-                height: 78px;
-                border-bottom: 1px solid #ddd;
+                height: 98px;
+                // border-bottom: 1px solid #ddd;
                 position: relative;
-                .country-container {
-                    margin-top: 48px;
-                    color: #333;
-                    font-size: 16px;
-                    cursor: pointer;
-                    // display: inline-block;
+                // margin-top:15px;
+                padding:20px 0;
+                .form-group {
+                    height:100%;
+                    width:100%;
+                    padding:0 5px;
                     float: left;
-                    position: relative;
-                    z-index: 3;
-                    .country-incon {
-                        width: 118px;
-                        a {
-                            max-width: 94px;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            float: left;
-                            color: #333;
-                            text-decoration: none;  
-                        }
+                    margin:0 auto;
+                    text-align: center;
+                    input {
+                        outline: none;
+                        height:30px;
+                        border:0;
+                        border-bottom:1px solid #ccc
                     }
-                }
-                .errorInfo {
-                    color: #f94343;
-                    font-size: 12px;
-                    padding-top: 26px;
-                    float: left;
-                }
-                .tip-container {
-                    position: relative;
-                    float: left;
-                    .tip-info {
-                        font-size: 16px;
-                        color: #aaa;
+                    label {
+                        font-size:16px;
+                        font-weight: 500;
+                        // margin-bottom:0;
+                        // float: left;
+                        // margin-left: 30px;
+                    }
+                    .p1 {
                         position: absolute;
-                        top: 5px;
-                        left: 0;
+                        top:55px;
+                        left:95px;                    
                     }
-                    .txt-info {
-                        width: 190px;
-                        border: 0;
-                        outline: 0;
-                        color: #333;
-                        font-size: 16px;
-                        margin-top: 8px;
+                    .p2 {
+                        position: absolute;
+                        top:112px;
+                        left:95px;                    
                     }
                 }
+                
+            
+                
+            }
+
+            
+        }
+
+        .modal-footer {
+            height:53px;
+            background-color: #f7f7f7;
+            position: absolute;
+            bottom:0;
+            height:51px;
+            width: 458px;
+            a {
+                color:#999;
+                font-size:16px;
+                cursor: pointer;
+                &:hover {
+                    color:#5aa700;
+                    text-decoration: none;
+                }
+            }
+            .reg-link {
+                margin-right:18px;
             }
         }
         
@@ -260,8 +294,6 @@ a:hover {
     }
     .QR:hover {
         background: #fff;
-        // border-right:1px solid #e7e7e7;
-        // border-left:1px solid #e7e7e7;
     }
 
 }

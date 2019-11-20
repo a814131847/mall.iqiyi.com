@@ -8,9 +8,7 @@
     <title>爱奇艺商城</title>
     <link rel="stylesheet" href="../font/iconfont.css">
     <script src="../../node_modules/requirejs/require.js" data-main="../js/main.index.js"></script>
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../style/index.css">
 </head>
 
@@ -39,39 +37,73 @@
                     <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
 
-                        <!-- 选项卡 -->
-                        <div>
+                        <!-- 注册选项卡开始 -->
+
+                        <div class="reg-part  hide show">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="myModalLabel">
-                                    <span class="title-dot"></span> 短信登录注册
+                                    <span class="title-dot"></span> 使用手机注册
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                <p class="sub-title">登录过程中会用到短信，请准备好您的手机</p>
-                                <div class="info-container" data-regbox="nameContainer">
-                                    <!-- 鼠标点击输入，添加类accountIn -->
-                                    <div class="country-container">
-                                        <span class="country-incon" data-regbox="zoneArea">
-                                            <a href="javascript:;" class="country-link" data-regbox="selectedZone" rseat="psprt_region" data-key="86">中国大陆</a>                                                
-                                        </span>
+                                <p class="sub-title">注册过程中会用到短信，请准备好您的手机</p>
+                                <div class="info-container">
+                                    <div class="form-group">
+                                        <label for="phone">手机</label>
+                                        <input type="text" id="phone" name="phone">
+                                        <p class="p1"></p>
                                     </div>
-                                    <!-- <p class="errorInfo"><span>手机号格式错误,请重新输入</span></p> -->
-                                    <div class="tip-container tip-account-container" data-regbox="nameInputArea">
-                                        <p class="tip-info tip-info-active" data-regbox="nameTip" style="display: none;">请输入手机号</p>
-                                        <input type="text" class="txt-info txt-account" data-regbox="name" maxlength="25">
+                                    <div class="form-group">
+                                        <label for="password">密码</label>
+                                        <input type="password" id="password" name="password">
+                                        <p class="p2"></p>
                                     </div>
                                 </div>
-                                <a href="" class="btn-green btn-login btn-gray" data-regbox="stepOneBtn" rseat="pslgp_smsbtn">下一步</a>
+
+                                <a href="" class="btn-green btn-reg btn-gray">注册</a>
                                 <p class="protocol-con">登录即代表您同意<a href="" target="_blank" class="protocol-link">用户协议</a>和<a href="" target="_blank" class="protocol-link">隐私政策</a>
                                 </p>
                             </div>
 
                         </div>
 
-                        <!-- 选项卡 -->
+                        <!-- 注册选项卡结束 -->
+
+                        <!-- 登录选项卡开始 -->
+
+                        <div class="log-part hide">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <span class="title-dot"></span> 使用手机登录
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="sub-title">登录过程中会用到短信，请准备好您的手机</p>
+                                <div class="info-container">
+                                    <div class="form-group">
+                                        <label for="phone">手机</label>
+                                        <input type="text" id="log-phone" name="phone">
+                                        <p class="p1 log-p1"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">密码</label>
+                                        <input type="password" id="log-password" name="password">
+                                        <p class="p2 log-p2"></p>
+                                    </div>
+                                </div>
+
+                                <a href="javascript:;" class="btn-green btn-login btn-gray">登录</a>
+                                <p class="protocol-con">登录即代表您同意<a href="" target="_blank" class="protocol-link">用户协议</a>和<a href="" target="_blank" class="protocol-link">隐私政策</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- 登录选项卡结束 -->
+
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <a class="reg-link">注册</a>
+                            <a class="login-link">登录</a>
                         </div>
                     </div>
 
@@ -142,7 +174,7 @@
 
             <div class="head_logo pull-left">
                 <a href="">
-                    <img src="../img/logo1126.png" alt="" title="爱奇艺商城">
+                    <img class="lazy" data-original="../img/logo1126.png" alt="" title="爱奇艺商城">
                 </a>
             </div>
 
@@ -200,7 +232,7 @@
 
                     <li>
                         <a href="" target="_blank">
-                            <img src="../img/kuqi.jpg" width="50" height="50" alt="" ">
+                            <img class="lazy" data-original="../img/kuqi.jpg" width="50" height="50" alt="" ">
                             <p><b title="酷奇高清VR">酷奇高清VR</b><span title="虚拟现实智能眼镜">虚拟现实智能眼镜</span></p>
                         </a>
                     </li>
@@ -328,7 +360,7 @@
         <div class="container">
             <div class="topBanner_unclose">
                 <a href="" target="_blank">
-                    <img src="../img/49a4cf04cdd44d11af508955e69db8c0.jpg">
+                    <img class="lazy" data-original="../img/49a4cf04cdd44d11af508955e69db8c0.jpg">
                 </a>
             </div>
         </div>
@@ -448,7 +480,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版宝物 低至19元起</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -457,7 +489,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">好美精品 低至6折</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -466,7 +498,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 即刻拥有</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -475,7 +507,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">老夫子联名系列</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -484,7 +516,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">阳澄湖正宗 不服来辩</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -493,7 +525,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 火热开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -502,7 +534,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边热卖中</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -511,7 +543,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">官网价优惠100 </a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -520,7 +552,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">无畏风雪 全面开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -529,7 +561,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 遇见小幸运</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -538,7 +570,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版宝物 低至19元起</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -547,7 +579,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">好美精品 低至6折</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -556,7 +588,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 即刻拥有</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -565,7 +597,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">老夫子联名系列</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -574,7 +606,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">阳澄湖正宗 不服来辩</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -583,7 +615,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 火热开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -592,7 +624,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边热卖中</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -601,7 +633,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">官网价优惠100 </a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -610,7 +642,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">无畏风雪 全面开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -619,7 +651,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 遇见小幸运</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -628,7 +660,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版宝物 低至19元起</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/cqyzljs.jpg" alt="从前有座灵剑山" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -637,7 +669,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">好美精品 低至6折</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/zychm.jpg" alt="这样唱好美" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -646,7 +678,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 即刻拥有</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxtx.jpg" alt="热血同行" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -655,7 +687,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">老夫子联名系列</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/lfz.jpg" alt="BABAMA STORE" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -664,7 +696,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">阳澄湖正宗 不服来辩</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/dzx.jpg" alt="奇葩说" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -673,7 +705,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 火热开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/rxsn.jpg" alt="热血少年" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -682,7 +714,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边热卖中</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/clnjxs.jpg" alt="初恋那件小事" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -691,7 +723,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">官网价优惠100 </a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/ip11.jpg" alt="IPhone11" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -700,7 +732,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">无畏风雪 全面开售</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/pdz.jpg" alt="攀登者" width="580" height="290"></a>
                             </div>
                         </li>
                         <li class="shopActivity" href="">
@@ -709,7 +741,7 @@
                                 <p class="shopPrice"><a href="" target="_blank">正版周边 遇见小幸运</a></p>
                             </div>
                             <div class="shopImg">
-                                <a href="" target="_blank"><img src="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
+                                <a href="" target="_blank"><img class="lazy" data-original="../img/sj.jpg" alt="世界欠我一个初恋" width="580" height="290"></a>
                             </div>
                         </li>
                     </ul>
@@ -850,7 +882,7 @@
 
                             <li target="_blank">
                                 <div class="goodImg">
-                                    <a href="" target="_blank"><img src="../img/tj04.jpg" alt="豆瓣电影TOP50精彩" width="320" height="160" "></a>
+                                    <a href="" target="_blank"><img  src="../img/tj04.jpg" alt="豆瓣电影TOP50精彩" width="320" height="160" "></a>
                                 </div>
                                 <p class="goodTitle">豆瓣电影TOP50精彩</p>
                                 <p class="goodDescribe">回味人生 经典必读</p>
@@ -858,6 +890,10 @@
 
                         </ul>
                     </div>
+
+
+
+
 
                     <!-- 热门推荐结束 -->
                 </div>
@@ -899,102 +935,102 @@
 
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand01.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand01.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand02.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand02.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand03.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand03.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand04.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand04.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand05.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand05.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand06.png" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand06.png" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand07.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand07.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand08.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand08.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand09.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand09.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand10.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand10.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand11.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand11.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand12.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand12.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand13.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand13.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand14.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand14.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand15.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand15.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand16.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand16.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand17.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand17.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand18.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand18.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand19.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand19.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
                 <div class="brand-item">
                     <a href="" target="_blank">
-                        <img src="../img/brand20.jpg" width="120px" height="120px" alt="">
+                        <img class="lazy" data-original="../img/brand20.jpg" width="120px" height="120px" alt="">
                     </a>
                 </div>
 
@@ -1013,7 +1049,7 @@
         <div class="container">
             <div class="topBanner_unclose">
                 <a href="" target="_blank">
-                    <img src="../img/276adce6380440bb8920e6c0ad0a1f93.jpg">
+                    <img class="lazy" data-original="../img/276adce6380440bb8920e6c0ad0a1f93.jpg">
                 </a>
             </div>
         </div>
@@ -1038,35 +1074,35 @@
                 <div class="footer_icons_List">
                     <ul class="icons_list">
                         <li class="iconbox">
-                            <div class="iconImg"><img src="../img/footer_redzhengLogo.png" alt="全球精选 品牌保障" width="70" height="70"></div>
+                            <div class="iconImg"><img class="lazy" data-original="../img/footer_redzhengLogo.png" alt="全球精选 品牌保障" width="70" height="70"></div>
                             <div class="iconText">
                                 <p>全球精选</p>
                                 <p>品质保障</p>
                             </div>
                         </li>
                         <li class="iconbox">
-                            <div class="iconImg"><img src="../img/footer_redmoneyLogo.png" alt="限时特卖 甄选好货" width="70" height="70"></div>
+                            <div class="iconImg"><img class="lazy" data-original="../img/footer_redmoneyLogo.png" alt="限时特卖 甄选好货" width="70" height="70"></div>
                             <div class="iconText">
                                 <p>限时特卖</p>
                                 <p>甄选好货</p>
                             </div>
                         </li>
                         <li class="iconbox">
-                            <div class="iconImg"><img src="../img/footer_redgoodLogo.png" alt="爱奇艺电商 口碑推荐" width="70" height="70"></div>
+                            <div class="iconImg"><img class="lazy" data-original="../img/footer_redgoodLogo.png" alt="爱奇艺电商 口碑推荐" width="70" height="70"></div>
                             <div class="iconText">
                                 <p>爱奇艺电商</p>
                                 <p>口碑推荐</p>
                             </div>
                         </li>
                         <li class="iconbox">
-                            <div class="iconImg"><img src="../img/footer_redvideoLogo.png" alt="直播购物 看好就买" width="70" height="70"></div>
+                            <div class="iconImg"><img class="lazy" data-original="../img/footer_redvideoLogo.png" alt="直播购物 看好就买" width="70" height="70"></div>
                             <div class="iconText">
                                 <p>直播购物</p>
                                 <p>看好就买</p>
                             </div>
                         </li>
                         <li class="iconbox">
-                            <div class="iconImg"><img src="../img/footer_redcollectLogo.png" alt="热剧同款 必追单品" width="70" height="70"></div>
+                            <div class="iconImg"><img class="lazy" data-original="../img/footer_redcollectLogo.png" alt="热剧同款 必追单品" width="70" height="70"></div>
                             <div class="iconText">
                                 <p>热剧同款</p>
                                 <p>必追单品</p>
@@ -1110,7 +1146,7 @@
                 <div class="footer_codes_List">
                     <ul class="codes_list">
                         <li class="codeBox">
-                            <div class="codeImg"><img src="../img/iqiyi_mall_code.png" alt="爱奇艺商城手机版" width="120" height="120"></div>
+                            <div class="codeImg"><img class="lazy" data-original="../img/iqiyi_mall_code.png" alt="爱奇艺商城手机版" width="120" height="120"></div>
                             <div class="codeNarrate">
                                 <h1>爱奇艺商城手机版</h1>
                                 <p>爱奇艺商城-购享娱乐</p>
@@ -1119,7 +1155,7 @@
                             </div>
                         </li>
                         <li class="codeBox">
-                            <div class="codeImg"><img src="../img/iqiyi_mall_num.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
+                            <div class="codeImg"><img class="lazy" data-original="../img/iqiyi_mall_num.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
                             <div class="codeNarrate">
                                 <h1>爱奇艺商城微信</h1>
                                 <p>关注微信</p>
@@ -1128,7 +1164,7 @@
                             </div>
                         </li>
                         <li class="codeBox">
-                            <div class="codeImg"><img src="../img/iqiyi_mall_ring.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
+                            <div class="codeImg"><img class="lazy" data-original="../img/iqiyi_mall_ring.jpg" alt="爱奇艺商城微信" width="120" height="120"></div>
                             <div class="codeNarrate">
                                 <h1>爱奇艺商城微信(订阅号)</h1>
                                 <p>关注微信订阅号</p>
@@ -1164,11 +1200,11 @@
                         <li>
                             <div class="mb10">
                                 <a href="" target="_blank" title="中国互联网诚信联盟">
-                                    <img src="../img/hlw.png" alt="中国互联网诚信联盟">中国互联网诚信联盟</a>
+                                    <img class="lazy" data-original="../img/hlw.png" alt="中国互联网诚信联盟">中国互联网诚信联盟</a>
                             </div>
                             <div class="mb10">
                                 <a href="" target="_blank" title="经营性网站备案信息">
-                                    <img src="../img/jyx.png" alt="经营性网站备案信息">&nbsp;经营性网站备案信息
+                                    <img class="lazy" data-original="../img/jyx.png" alt="经营性网站备案信息">&nbsp;经营性网站备案信息
                                 </a>
                             </div>
                         </li>
@@ -1227,7 +1263,7 @@
 
                 <!-- 举报中心 -->
                 <div class="clearfix tc">
-                    <a title="中国互联网举报中心" target="_blank" href=""><img alt="中国互联网举报中心" src="../img/jbzx.png"><span style="color:#666;">中国互联网举报中心</span></a>
+                    <a title="中国互联网举报中心" target="_blank" href=""><img alt="中国互联网举报中心" class="lazy" data-original="../img/jbzx.png"><span style="color:#666;">中国互联网举报中心</span></a>
                     <a title="网络举报APP下载" target="_blank" href=""><span class="ml30" style="color:#666;">网络举报APP下载</span></a>
                     <a title="网上有害信息举报专区" target="_blank" href=""><span class="ml30" style="color:#666;">网上有害信息举报专区</span></a>
                     <a title="网上暴恐有害信息举报" target="_blank" href=""><span class="ml30" style="color:#666;">网上暴恐有害信息举报</span></a>

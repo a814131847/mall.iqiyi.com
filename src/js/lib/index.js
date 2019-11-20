@@ -9,7 +9,6 @@ define(['jquery'], function($) {
                 type: 'get',
                 dataType: 'json',
                 success: function(res) {
-                    console.log(res);
                     let temp = '';
                     res.forEach(elm => {
                         // let pic = JSON.parse(elm.product_pci);
@@ -18,7 +17,7 @@ define(['jquery'], function($) {
                         <li>
                             <div class="product">
                                 <a class="productPic" href="${baseUrl}/src/html/product.html?id=${elm.product_id}" style="display:block !important;" target="_blank">
-                                    <img alt="jrjxPic" src="${elm.product_pic}" width="140" height="140" />
+                                    <img class="lazy" alt="jrjxPic" data-original="${elm.product_pic}" width="140" height="140" />
                                 </a>
                                 <div class="productInfo">
                                     <p class="productTitle"><a href="//mall.iqiyi.com/item/19rrkjvbd8" style="display:block !important;" target="_blank">${elm.product_name}</a></p>
@@ -33,6 +32,21 @@ define(['jquery'], function($) {
                         `
                     });
                     $('.productList').append(temp);
+                    $("img.lazy").lazyload({
+                        placeholder: "../img/loading.gif",
+                        effect: "fadeIn"
+                    });
+                    $('.modal-footer>a').on('click', function() {
+                        var index = $('.modal-footer>a').index(this);
+                        // $(this).addClass('actived').siblings().removeClass('actived');
+                        $('.modal-content>div').eq(index).addClass('show').siblings().removeClass('show');
+                    });
+                    $('.login').on('click', function() {
+                        $('.log-part').addClass('show').siblings().removeClass('show');
+                    })
+                    $('.reg').on('click', function() {
+                        $('.reg-part').addClass('show').siblings().removeClass('show');
+                    })
                 }
             })
         }
