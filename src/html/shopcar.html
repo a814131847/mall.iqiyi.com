@@ -8,7 +8,7 @@
     <title>购物车</title>
     <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../../node_modules/requirejs/require.js" data-main="../js/main"></script>
+    <script src="../../node_modules/requirejs/require.js" data-main="../js/main.shopcar.js"></script>
     <link rel="stylesheet" href="../style/index.css">
 </head>
 
@@ -23,8 +23,88 @@
             <div class="top-navLeft pull-left col-md-4">
                 <span class="pull-left welcome">欢迎来到爱奇艺商城</span>
                 <div class="loginmenu pull-left center-block">
-                    <a href="javascript" class="login">请登录</a>
-                    <a href="javascript" class="reg">免费注册</a>
+                    <a href="" class="login " data-toggle="modal" data-target="#myModal">请登录</a>
+                    <a href="" class="reg" data-toggle="modal" data-target="#myModal">免费注册</a>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+
+                        <!-- 注册选项卡开始 -->
+
+                        <div class="reg-part  hide show">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <span class="title-dot"></span> 使用手机注册
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="sub-title">注册过程中会用到短信，请准备好您的手机</p>
+                                <div class="info-container">
+                                    <div class="form-group">
+                                        <label for="phone">手机</label>
+                                        <input type="text" id="phone" name="phone">
+                                        <p class="p1"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">密码</label>
+                                        <input type="password" id="password" name="password">
+                                        <p class="p2"></p>
+                                    </div>
+                                </div>
+
+                                <a href="" class="btn-green btn-reg btn-gray">注册</a>
+                                <p class="protocol-con">登录即代表您同意<a href="" target="_blank" class="protocol-link">用户协议</a>和<a href="" target="_blank" class="protocol-link">隐私政策</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- 注册选项卡结束 -->
+
+                        <!-- 登录选项卡开始 -->
+
+                        <div class="log-part hide">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <span class="title-dot"></span> 使用手机登录
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="sub-title">登录过程中会用到短信，请准备好您的手机</p>
+                                <div class="info-container">
+                                    <div class="form-group">
+                                        <label for="phone">手机</label>
+                                        <input type="text" id="log-phone" name="phone">
+                                        <p class="p1 log-p1"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">密码</label>
+                                        <input type="password" id="log-password" name="password">
+                                        <p class="p2 log-p2"></p>
+                                    </div>
+                                </div>
+
+                                <a href="javascript:;" class="btn-green btn-login btn-gray">登录</a>
+                                <p class="protocol-con">登录即代表您同意<a href="" target="_blank" class="protocol-link">用户协议</a>和<a href="" target="_blank" class="protocol-link">隐私政策</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- 登录选项卡结束 -->
+
+                        <div class="modal-footer">
+                            <a class="reg-link">注册</a>
+                            <a class="login-link">登录</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -73,7 +153,7 @@
                     </a>
                 </div>
                 <div class="topNav_orders pull-right">
-                    <a class="topMenuCar_link" href="javascript">
+                    <a class="topMenuCar_link" href="http://127.0.0.1:8080/iqiyi.com/src/html/shopcar.html">
                         <span class="iconfont icon-gouwuchekong"></span>
                         <span class="topR_txt">购物车<i  data-elem="cartnum" class="orange">0</i>件</span>
                     </a>
@@ -105,12 +185,104 @@
 
             <!-- logo结束 -->
 
+            <!-- 进程开始  -->
+
+            <div class="head_step pull-right">
+                <ul class="step_txtList  step_1">
+                    <li class="c-3c">查看购物车</li>
+                    <li>确认订单信息</li>
+                    <li>买家付款</li>
+                    <li>交易成功</li>
+                </ul>
+                <div class="stepBar step_1">
+                    <div class="nonceStep"></div>
+                    <div class="pastStep"></div>
+                </div>
+            </div>
+
 
         </div>
     </div>
 
     <!-- 头部结束 -->
 
+    <!-- 我的购物车 -->
+
+    <div id="car-main">
+        <div class="container">
+            <div class="main">
+                <div class="page-order">
+
+                    <!-- 头部 -->
+
+                    <div class="mod-pageHeader">
+                        <p class="pageHeader_headline">我的购物车</p>
+                        <div class="pageHeader_info">现在<a href="" class="login " data-toggle="modal" data-target="#myModal">登录</a>，您购物车中的商品将被保存3个月</div>
+                    </div>
+
+                </div>
+
+                <div class="title">
+                    <ul class="title-box">
+                        <li class="check">
+                            <input type="checkbox"> 全选
+                        </li>
+                        <li class="detail">
+                            商品信息
+                        </li>
+                        <li class="price">
+                            单价（元）
+                        </li>
+                        <li class="num">
+                            数量
+                        </li>
+                        <li class="disbursements">
+                            实付款（元）
+                        </li>
+                        <li class="trade_operate">
+                            交易操作
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product-box">
+
+                </div>
+
+
+                <div class="car-end">
+                    <ul class="end-box">
+                        <li class="check">
+                            <input type="checkbox"> 全选
+                        </li>
+                        <li class="del">
+                            删除
+                        </li>
+                        <li class="shoucang">
+                            移入收藏夹
+                        </li>
+                        <li class="clear-car">
+                            清空购物车
+                        </li>
+                        <li class="btn-jiesuan">
+                            <a class="jiesuan">
+                                结算
+                            </a>
+                        </li>
+
+                        <li class="money">
+                            合计（不含运费）：<span>¥<em>49.9</em></span>
+                        </li>
+                        <li class="num">
+                            已选商品<em>5</em>件
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 
 

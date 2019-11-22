@@ -1639,6 +1639,7 @@ a:visited {
 // 右侧工具栏结束
 
 // 内容上半部分开始
+
 #main-top {
     .container {
 
@@ -1662,6 +1663,7 @@ a:visited {
         // 标题结束
 
         // 内容开始
+
         .main-top-pro {
 
            // 内容左侧开始
@@ -2190,12 +2192,304 @@ a:visited {
                 }
             }
 
+            // 内容右侧结束
 
         }
+
+        // 内容结束
 
          
         
 
 
+    }
+}
+
+// 内容上半部分结束
+
+
+// 商品详情结束
+
+
+
+
+
+// 购物车部分
+
+// 头部开始
+
+.head_step {
+    padding-top: 25px;
+    color: #999;
+    width: 386px;
+    .step_txtList {
+        list-style: none;
+        float: right;
+        
+        li {
+            float: left;
+            font-size: 14px;
+            width: 96px;
+            text-align: center;
+        }
+        li:first-child{
+            color: #ff7b7e;
+            font-size: 15px;
+        } 
+    }
+    .stepBar {
+        width:100%;
+        margin-top: 10px;
+        background-image: url(../img/def_grey_step.png) ;
+        background-repeat: no-repeat;
+        height: 30px;
+        position: relative;
+        z-index: 0;
+        float: right;
+        .pastStep {
+            width: 25%;
+            height: 30px;
+            background-image: url(../img/sel_red_step.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            z-index: 5;
+        }
+    }   
+}
+
+// 头部结束
+
+// 我的购物车
+
+#car-main {
+    .container {
+        width:980px;
+        .main {
+            border: 1px solid #e7e7e7;
+            background: #fff;
+            width: 980px;
+            padding: 20px;
+            .page-order {
+                width: 100%;
+                font-size: 12px;
+                line-height: 20px;
+                .mod-pageHeader {
+                    margin-bottom: 16px;
+                    height: 38px;
+                    line-height: 35px;
+                    border-bottom: 1px solid #e7e7e7;
+                    position: relative;
+                    .pageHeader_headline {
+                        font-size: 14px;
+                        height: 98%;
+                        margin-right: 30px;
+                        float: left;
+                        font-weight: bold;
+                        color: #3c3c3c;
+                        font-family: "\5FAE\8F6F\96C5\9ED1";
+                        border-bottom: 2px solid #ee394b;
+                    }
+                    .pageHeader_info {
+                        a {
+                            height: 22px;
+                            line-height: 22px;
+                            border: 1px solid #ee394b;
+                            border-radius: 2px;
+                            background: #ee394b;
+                            color: #fff;
+                            display: inline-block;
+                            text-align: center;
+                            padding: 0 20px;
+                            font-size: 12px;
+                            margin: 0 10px;
+                        }
+                    }
+                }
+            }
+
+            .title {
+                .title-box {
+                    border: 1px solid #e7e7e7;
+                    background: #f7f7f7;
+                    width: 100%;
+                    height: 38px;
+                    line-height: 38px;
+                    li {
+                        float: left;
+                        text-align: center;
+                        font-size: 12px;
+                        color:#777;
+                    }
+                    .check {
+                        width:56px;
+                        color: #777;
+                    }
+                    .detail {
+                        width: 364px;
+
+                    }
+                    .price {
+                        width: 101px;
+                    }
+                    .num {
+                        width:141.6px;
+                    }
+                    .disbursements {
+                        width: 172px;
+                    }
+                    .trade_operate {
+                        width: 101px;
+                    }
+                }
+            }
+
+            .product-box {
+                .product-list {
+                    border: 1px solid #e7e7e7;
+                    background: #fff7f7;
+                    width: 100%;
+                    height: 100px;
+                    line-height: 100px;
+                    li {
+                        float: left;
+                        text-align: center;
+                        font-size: 12px;
+                        color:#777;
+                      
+                    } 
+                    .check {
+                        width:40px;
+                        color: #777;
+                    }
+                    .detail {
+                        width: 373.6px;
+                        padding:10px 0;
+                        >a {
+                            float: left;
+                            height:80px;
+                            width:80px;
+                            line-height: 80px;
+                        }
+                        .orderItems_content {
+                            height:80px;
+                            width:283.6px;
+                            float: right;
+                            position: relative;
+                            a {
+                                display: inline-block;
+                                position: absolute;
+                                top:0;
+                                left:0;
+                                height:27.2px;
+                                line-height:13.6px ;
+                                text-align: left;
+                                color:#3c3c3c;
+                            }
+                            .tx-inline {
+                                height:13.6px;
+                                font-size: 12px;
+                                color:#999;
+                                position: absolute;
+                                top:35px;
+                                left:0;
+                                line-height:14px;
+                            }
+                        }
+
+                    }
+                    .price {
+                        width: 111px;
+                    }
+                    .num {
+                        width:140.6px;
+                        input {
+                            height:30px;
+                            width: 82px;
+                            text-align: center;
+                        }
+                    }
+                    .disbursements {
+                        width: 170px;
+                        font-size: 18px;
+                        color: #ee394b;
+                    }
+                    .trade_operate {
+                        width: 100px;
+                        a {
+                            color:#777;
+                        }
+                    }
+                }
+            }
+
+            .car-end {
+                .end-box {
+                    border: 1px solid #e7e7e7;
+                    background: #f7f7f7;
+                    width: 100%;
+                    height: 58.7px;
+                    line-height: 58.7px;
+                    li {
+                        float: left;
+                        text-align: center;
+                        font-size: 12px;
+                        color:#777;
+                        
+                    }
+                    .check {
+                        width:85px;
+                    } 
+                    .del {
+                        width: 48px;
+                    }
+                    .shoucang {
+                        width: 60px;
+                        margin-left:10px;
+                    }
+                    .clear-car {
+                        width: 60px;
+                        margin-left: 10px;
+                    } 
+                    .btn-jiesuan {
+                        float: right;
+                        margin-right:10px;
+                        width: 112px;
+                        height:100%;
+                        .jiesuan{
+                        width: 112px;
+                        height: 40px;
+                        background: #ee394b;
+                        font-size: 18px;
+                        display: inline-block;
+                        color:#fff;
+                        margin-top:10px;
+                        line-height: 40px;
+                        border-radius: 5px;
+                      }  
+                    }
+                    
+                    .money {
+                        width: 170px;
+                        float: right;
+                        margin-right:16px;
+                        span {
+                            font-size: 18px;
+                            color:#ee394b;
+                        }
+                    }
+                   .num {
+                        width: 67.65px;
+                        margin-right:17px;
+                        float: right;
+                        em {
+                            color:#ee394b;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
     }
 }

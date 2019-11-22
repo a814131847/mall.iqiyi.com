@@ -178,7 +178,7 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
                             <div class="kucun">
                                 <label class="shuliang">数量： </label>
                                 <div class="num">
-                                    <input type="number" placeholder="1">
+                                    <input class="pro-num" type="number" placeholder="" value="1">
                                     <span class="amount_erro ">库存${res.product_has}件</span>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
         
                             <div class="jiarugouwuche ">
                                 <a class="detail-btn detail-btn-buy  " href="#">立即购买</a>
-                                <a class="detail-btn detail-btn-cart " href=""><i class="icon-shopping-cart"></i>加入购物车
+                                <a class="detail-btn detail-btn-cart add" href="javascript:;"><i class="icon-shopping-cart"></i>加入购物车
                                 </a>
                             </div>
         
@@ -245,7 +245,7 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
                 </div>
                     `;
                     $('#main-top').append(tempstr);
-                    callback && callback(res.id, res.price);
+                    callback && callback(res.product_id, res.product_price);
                 }
             })
         },

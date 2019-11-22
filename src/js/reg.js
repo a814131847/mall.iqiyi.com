@@ -93,10 +93,7 @@ define(['jquery', 'md5'], function($, md5) {
                         alert(JSON.parse(res).msg);
                         if ((JSON.parse(res).msg) == "登录成功") {
                             location.reload();
-                            // $('.login').html($('#log-phone').val())
-                            // localStorage.setItem('customname', $('.login').value());
                         } else if ((JSON.parse(res).msg) == "密码错误") {
-                            // alert(3);
                             $('#log-password').val('');
                             $('.log-p2').html('');
                         } else {
