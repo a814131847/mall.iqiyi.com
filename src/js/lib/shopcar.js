@@ -14,7 +14,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                     },
                     dataType: 'json',
                     success: function(res) {
-                        console.log(res);
+                        // console.log(res);
                         let tempstr = '';
                         res.forEach(elm => {
                             let pic = (elm.product_pic);
@@ -24,7 +24,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                             });
 
                             tempstr += `
-                            <ul class="product-list">
+                            <ul class="product-list" id="${elm.product_id}">
                             <li class="check">
                                 <input type="checkbox">
                             </li>
@@ -41,18 +41,39 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 ${elm.product_price} 
                             </li>
                             <li class="num">
-                                <input type="number" value="${arr[0].num}">
+                                <input type="number" value="${arr[0].num}" class="pro_num">
                             </li>
                             <li class="disbursements">
                                 ${(arr[0].num*elm.product_price).toFixed(2)}
                             </li>
                             <li class="trade_operate">
-                                <a href=";" class="del">删除</a>
+                                <a href="javascript:;" class="del">删除</a>
                             </li>
                         </ul>
                             `;
                         });
                         $('.product-box').append(tempstr);
+                        $('.trade_operate').on('click', function() {
+                            console.log($(this).parent());
+                            let id = $(this).parent().attr('id');
+                            let shop = JSON.parse(cookie.get('shop'));
+                            console.log(shop);
+                            if (shop.length > 1) {
+                                let shopp = shop.filter(elm => {
+                                    return elm.id != id; //过滤返回id不与按钮相同的商品id
+                                })
+                                cookie.set("shop", JSON.stringify(shopp), 1); //重新设定cookie
+                            } else {
+                                cookie.remove('shop'); //移除原有cookie
+                            }
+                            location.reload();
+                        });
+                        $('.pro_num').on('change', function() {
+                            // console.log(($(this).val()) * ($(this).parent().prev().text()))
+                            let addprice = ($(this).val()) * ($(this).parent().prev().text()); //重新计算价格
+                            $(this).parent().next().text(addprice.toFixed(2)); //放入页面
+                        })
+
                     }
                 });
             }
