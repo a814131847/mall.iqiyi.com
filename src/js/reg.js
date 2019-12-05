@@ -11,8 +11,9 @@ define(['jquery', 'md5'], function($, md5) {
                         password: $.md5($('#password').val())
                     },
                     success: function(res) {
+                        // alert("1")
                         alert(JSON.parse(res).msg);
-                        localtion.reload()
+                        location.reload();
                     }
                 })
             });

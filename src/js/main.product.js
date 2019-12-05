@@ -22,6 +22,7 @@ require(['jquery', 'product', 'public2', 'bootstrap'], function($, product, boot
         $('.add').on('click', function() {
             // alert(1);
             // console.log($('.pro-num'))
+            alert("加入购物车成功")
             product.addItem(id, price, $('.pro-num').val());
         });
         product.fdj();

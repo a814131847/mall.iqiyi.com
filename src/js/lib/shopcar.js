@@ -72,6 +72,42 @@ define(['jquery', 'cookie'], function($, cookie) {
                             // console.log(($(this).val()) * ($(this).parent().prev().text()))
                             let addprice = ($(this).val()) * ($(this).parent().prev().text()); //重新计算价格
                             $(this).parent().next().text(addprice.toFixed(2)); //放入页面
+                        });
+
+                        $('.clist :checkbox').on('click', function() {
+
+                            // $('.clist :checkbox').prop('clicked', function(i, val) {
+
+                            // })
+                            // $('.clist :checkbox').each(function(i, elm) {
+                            //     let a = 0;
+                            //     if (elm.prop('clicked')) {
+                            //         a++;
+                            //     }
+                            // })
+
+                            if ($(".product-list input:checked").length === $('.clist :checkbox').length) {
+                                $(':checkbox').eq(0).prop('checked', true);
+                            } else {
+                                $(':checkbox').eq(0).prop('checked', false);
+                            }
+
+                            let id = $(this).parents('li').attr('class').slice(4);
+                            let shop = JSON.parse(cookie.get('shop'));
+                            let shop1 = shop.filter(elm => {
+                                return elm.id == id;
+                            })
+                            let num = shop1[0].price * shop1[0].num;
+                            // console.log(num);
+                            // console.log(shop1);
+                            if ($(this).prop('checked')) {
+                                $('.foo .num').html(parseInt($('.foo .num').html()) + 1);
+                                $('.money').html(parseInt($('.money').html()) + num);
+                            } else {
+                                $('.money').html(parseInt($('.money').html()) - num);
+                                $('.foo .num').html(parseInt($('.foo .num').html()) - 1);
+                            }
+                            // console.log($(this).prop('checked'));
                         })
 
                     }
