@@ -5,7 +5,8 @@ require.config({
         lazyload: './jquery.lazyload.min',
         bootstrap: '../../node_modules/bootstrap/dist/js/bootstrap.min',
         md5: "./jquery.md5",
-        reg: "./reg"
+        reg: "./reg",
+        cookie: "./lib/cookie",
     },
     shim: {
         lazyload: ['jquery'],
@@ -14,8 +15,13 @@ require.config({
     }
 });
 
-require(['jquery', 'index', 'lazyload', 'bootstrap'], function($, index, lazyload, bootstrap) {
+require(['jquery', 'index', 'lazyload', 'bootstrap', 'cookie'], function($, index, lazyload, bootstrap, cookie) {
     index.render();
+    let shop = cookie.get('shop');
+    if (shop) {
+        shop = JSON.parse(shop);
+        $('.orange').text(shop.length)
+    }
 
 
 });

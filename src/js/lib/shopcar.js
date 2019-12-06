@@ -3,8 +3,10 @@ define(['jquery', 'cookie'], function($, cookie) {
     return {
         render: function() {
             let shop = cookie.get('shop');
+
             if (shop) {
                 shop = JSON.parse(shop);
+                $('.orange').text(shop.length);
                 let idList = shop.map(elm => elm.id).join(); //取id并且用,连接
                 $.ajax({
                     url: `${baseUrl}/lib/shop.php`,
@@ -41,11 +43,9 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 ${elm.product_price} 
                             </li>
                             <li class="num">
-                                <input type="number" value="${arr[0].num}" class="pro_num">
+                                <input type="number" value="${arr[0].num}" class="pro_num" max="" min = "1">
                             </li>
-                            <li class="disbursements">
-                                ${(arr[0].num*elm.product_price).toFixed(2)}
-                            </li>
+                            <li class="disbursements">${(arr[0].num*elm.product_price).toFixed(2)}</li>
                             <li class="trade_operate">
                                 <a href="javascript:;" class="del">删除</a>
                             </li>
@@ -53,6 +53,8 @@ define(['jquery', 'cookie'], function($, cookie) {
                             `;
                         });
                         $('.product-box').append(tempstr);
+
+                        // 删除cookie
                         $('.trade_operate').on('click', function() {
                             console.log($(this).parent());
                             let id = $(this).parent().attr('id');
@@ -68,46 +70,88 @@ define(['jquery', 'cookie'], function($, cookie) {
                             }
                             location.reload();
                         });
+
+                        // 改变数量价格
+                        let Allcheck = [];
+                        let Allcheckprice = [];
+                        let sum = 0;
+
+                        function getSum() {
+                            sum = 0;
+                            Allcheckprice.forEach((elm, i) => {
+                                sum += elm.price
+                            });
+                            sum = sum.toFixed(2);
+                            $('.allCheckedPrice').text(sum)
+                        };
                         $('.pro_num').on('change', function() {
-                            // console.log(($(this).val()) * ($(this).parent().prev().text()))
                             let addprice = ($(this).val()) * ($(this).parent().prev().text()); //重新计算价格
                             $(this).parent().next().text(addprice.toFixed(2)); //放入页面
+                            Allcheckprice.forEach((elm, i) => {
+                                if (elm.id == $(this).parent().parent().attr('id')) {
+                                    elm.price = parseFloat($(this).parent().next().text());
+                                }
+                                sum = 0;
+                                getSum();
+                            })
                         });
 
-                        $('.clist :checkbox').on('click', function() {
+                        // 单选框被点击时
+                        $('.check :checkbox').on('click', function() {
+                            sum = 0;
+                            let checkid = $(this).parent().parent().attr("id")
+                            let checkallprice = Number((parseFloat($(this).parent().next().next().next().next().text())).toFixed(2));
 
-                            // $('.clist :checkbox').prop('clicked', function(i, val) {
-
-                            // })
-                            // $('.clist :checkbox').each(function(i, elm) {
-                            //     let a = 0;
-                            //     if (elm.prop('clicked')) {
-                            //         a++;
-                            //     }
-                            // })
-
-                            if ($(".product-list input:checked").length === $('.clist :checkbox').length) {
-                                $(':checkbox').eq(0).prop('checked', true);
-                            } else {
-                                $(':checkbox').eq(0).prop('checked', false);
-                            }
-
-                            let id = $(this).parents('li').attr('class').slice(4);
-                            let shop = JSON.parse(cookie.get('shop'));
-                            let shop1 = shop.filter(elm => {
-                                return elm.id == id;
-                            })
-                            let num = shop1[0].price * shop1[0].num;
-                            // console.log(num);
-                            // console.log(shop1);
                             if ($(this).prop('checked')) {
-                                $('.foo .num').html(parseInt($('.foo .num').html()) + 1);
-                                $('.money').html(parseInt($('.money').html()) + num);
+                                Allcheck.push(checkid);
+                                Allcheckprice.push({
+                                    id: checkid,
+                                    price: checkallprice
+                                });
+
                             } else {
-                                $('.money').html(parseInt($('.money').html()) - num);
-                                $('.foo .num').html(parseInt($('.foo .num').html()) - 1);
+                                Allcheck.splice(Allcheck.indexOf(checkid), 1)
+                                Allcheckprice.forEach((elm, i) => {
+                                    if (elm.id == checkid) {
+                                        Allcheckprice.splice(i, 1)
+                                    }
+                                })
                             }
-                            // console.log($(this).prop('checked'));
+                            $('.checkednum').text(Allcheckprice.length)
+
+                            getSum();
+
+                            // 所有复选框被选中时，全选被选中
+                            if (shop.length == Allcheckprice.length) {
+                                $('.allcheck :checkbox').prop('checked', true)
+                            } else {
+                                $('.allcheck :checkbox').prop('checked', false)
+                            }
+                        })
+
+                        $('.allcheck :checkbox').on('click', function() {
+                            if ($(this).prop('checked')) {
+                                $('.check :checkbox').prop('checked', true)
+                                $('.allcheck :checkbox').prop('checked', true)
+                                Allcheckprice = []
+
+                                shop.forEach((elm, i) => {
+                                    Allcheckprice.push({
+                                        id: elm.id,
+                                        price: parseFloat($(`#${elm.id}`).children('.disbursements').text())
+                                    });
+                                })
+                                getSum()
+                                $('.checkednum').text(shop.length)
+                            } else {
+                                $('.check :checkbox').prop('checked', false)
+                                $('.allcheck :checkbox').prop('checked', false)
+                                Allcheckprice = []
+                                $('.allCheckedPrice').text(0)
+                                $('.checkednum').text(0)
+
+                            }
+
                         })
 
                     }

@@ -5,6 +5,12 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
         render: function(callback) {
             let id = location.search.split('=')[1];
             // console.log(id)
+            let shop = cookie.get('shop');
+            if (shop) {
+                shop = JSON.parse(shop);
+                $('.orange').text(shop.length)
+                $('.toolbar_nub').text(shop.length)
+            }
             $.ajax({
                 url: `${baseUrl}/lib/getitem.php`,
                 type: 'get',
@@ -262,6 +268,7 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
 
             if (shop) {
                 shop = JSON.parse(shop);
+                $('.orange').text(shop.length)
                 if (shop.some(elm => elm.id == id)) {
                     shop.forEach(elm => {
                         elm.id == id ? elm.num = num : null;
@@ -274,6 +281,7 @@ define(['jquery', 'cookie', 'public2'], function($, cookie) {
                 shop.push(product); //将商品放入购物车
             }
             cookie.set('shop', JSON.stringify(shop), 1);
+
         },
         fdj: function() {
             var small = $('.small'),
