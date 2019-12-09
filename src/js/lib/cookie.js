@@ -1,4 +1,4 @@
-define([],function(){
+define([], function() {
     return {
         get: function(key) {
             if (document.cookie) { //判断是否有cookie
@@ -25,4 +25,3 @@ define([],function(){
         }
     };
 })
- 
